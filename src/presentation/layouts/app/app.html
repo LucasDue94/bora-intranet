@@ -1,0 +1,26 @@
+<main class="app-shell">
+  <section class="hero">
+    <div class="hero__content">
+      <p-tag value="Angular 21 + PrimeNG 21" severity="info" />
+      <h1>{{ title() }}</h1>
+      <p>
+        Base inicial do projeto configurada com Angular 21, roteamento, SCSS e
+        PrimeNG usando o tema Aura.
+      </p>
+      <div class="hero__actions">
+        <p-button label="Acessar painel" icon="pi pi-arrow-right" />
+        <p-button label="Documentacao" icon="pi pi-book" severity="secondary" outlined />
+      </div>
+    </div>
+
+    <p-card header="Status do setup" subheader="Dependencias principais">
+      <ul class="setup-list">
+        <li><i class="pi pi-check-circle"></i> Angular 21 instalado</li>
+        <li><i class="pi pi-check-circle"></i> PrimeNG 21.1.6 instalado</li>
+        <li><i class="pi pi-check-circle"></i> Tema Aura configurado</li>
+      </ul>
+    </p-card>
+  </section>
+
+  <router-outlet />
+</main>
