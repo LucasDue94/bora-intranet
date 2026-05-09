@@ -1,0 +1,21 @@
+<div class="sidebar-menu__brand flex align-items-center gap-3">
+  <p-avatar label="B" shape="circle" size="large" styleClass="bg-primary" />
+  <div class="sidebar-menu__brand-text grid gap-1 min-w-0">
+    <strong class="text-color font-semibold line-height-1">Bora</strong>
+    <span class="text-color-secondary text-sm line-height-1">Intranet</span>
+  </div>
+</div>
+
+<div class="sidebar-menu__separator surface-border border-top-1"></div>
+
+<div class="sidebar-menu__toggle">
+  <p-button
+    [attr.aria-label]="isOpen() ? 'Recolher menu lateral' : 'Expandir menu lateral'"
+    [icon]="isOpen() ? 'pi pi-angle-double-left' : 'pi pi-angle-double-right'"
+    styleClass="sidebar-menu__toggle-button bg-primary border-primary"
+    rounded
+    (onClick)="toggleSidebar()"
+  />
+</div>
+
+<p-menu [model]="navigationItems()" styleClass="sidebar-menu__navigation w-full" />

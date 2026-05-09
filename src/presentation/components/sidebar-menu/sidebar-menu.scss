@@ -1,0 +1,56 @@
+:host {
+  min-width: 0;
+  position: relative;
+  transition:
+    padding 180ms ease,
+    width 180ms ease;
+  z-index: 1;
+}
+
+:host(.sidebar-menu--collapsed) {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+.sidebar-menu__brand {
+  min-width: 248px;
+  transition: opacity 160ms ease;
+}
+
+.sidebar-menu__separator {
+  flex: 0 0 auto;
+}
+
+.sidebar-menu__toggle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  z-index: 2;
+}
+
+:host(.sidebar-menu--collapsed) .sidebar-menu__brand,
+:host(.sidebar-menu--collapsed) .sidebar-menu__separator,
+:host(.sidebar-menu--collapsed) ::ng-deep .sidebar-menu__navigation {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+:host ::ng-deep .sidebar-menu__navigation {
+  background: transparent;
+  border: 0;
+  min-width: 248px;
+  padding: 0;
+  width: 100%;
+}
+
+:host ::ng-deep .sidebar-menu__navigation .p-menu-item-content {
+  border-radius: var(--p-content-border-radius);
+}
+
+:host ::ng-deep .sidebar-menu__toggle-button {
+  box-shadow: var(--p-overlay-popover-shadow);
+  height: 2.5rem;
+  width: 2.5rem;
+}

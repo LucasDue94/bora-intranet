@@ -6,6 +6,8 @@ Você está trabalhando em um projeto Angular standalone para uma intranet de um
 
 Siga sempre estas regras globais.
 
+Antes de tudo selecione a versão do node utilizando nvm use 22.12.0
+
 ---
 
 # 1. Arquitetura
@@ -136,7 +138,7 @@ Sempre avalie se a feature precisa de:
 - dto
 - mapper
 - port
-- service
+- servicepreciso
 - repository
 - page
 - componentes reutilizáveis
@@ -157,3 +159,9 @@ Crie apenas o necessário.
 - Evitar abstrações desnecessárias.
 - Evitar duplicação de responsabilidade.
 - Manter separação clara entre camadas.
+- Priorizar uso de componentes do Primeng
+- Usaremos o padrão BEM css
+- Priorizar reaproveitamento de css, sempre pensar de modo geral e verificar se já existe uma classe para aquela necessidade antes de criar uma nova
+- Utilizar as classes utilitárias Primeflex e Primeicons
+- Sempre componentizar quando possível
+- Não se preocupe com os testes unitários, só escreva os testes para o componente que eu pedir
