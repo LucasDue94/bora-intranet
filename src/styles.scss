@@ -1,6 +1,18 @@
 @import 'primeicons/primeicons.css';
 @import 'primeflex/primeflex.css';
 
+:root {
+  color-scheme: dark;
+
+  --bg: #121212;
+  --surface1: #1e1e1e;
+  --surface2: #2c2c2c;
+  --cta: #d4ff00;
+  --text-high: #f4f4f4;
+  --text-mid: #b0b6bb;
+  --text-low: #6b7280;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -12,6 +24,8 @@ body {
 }
 
 body {
+  background: var(--bg);
+  color: var(--p-text-color);
   font-family:
     Inter,
     ui-sans-serif,

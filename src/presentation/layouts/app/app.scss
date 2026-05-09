@@ -20,14 +20,6 @@
   min-width: 0;
 }
 
-.app-header {
-  min-height: 72px;
-}
-
-.app-header__user-info strong {
-  font-size: 0.9375rem;
-}
-
 .app-content__empty {
   max-width: 760px;
 }
@@ -39,13 +31,5 @@
 
   .app-shell--collapsed {
     grid-template-columns: 64px minmax(0, 1fr);
-  }
-
-  .app-header {
-    min-height: 64px;
-  }
-
-  .app-header__user-info {
-    display: none;
   }
 }

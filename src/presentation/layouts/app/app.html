@@ -9,28 +9,7 @@
   />
 
   <div class="app-main min-w-0">
-    <header
-      class="app-header surface-card surface-border border-bottom-1 flex align-items-center justify-content-between gap-3 px-4"
-    >
-      <div class="app-header__start flex align-items-center gap-2 min-w-0">
-        <div class="app-header__title grid gap-1 min-w-0">
-          <strong class="text-color font-semibold line-height-1 white-space-nowrap">
-            Espaco principal
-          </strong>
-          <span class="text-color-secondary text-sm line-height-1 white-space-nowrap">
-            Operacao e gestao de eventos
-          </span>
-        </div>
-      </div>
-
-      <div class="app-header__user flex align-items-center gap-3">
-        <div class="app-header__user-info grid gap-1 text-right">
-          <strong class="text-color font-semibold line-height-1">Marina Costa</strong>
-          <span class="text-color-secondary text-sm line-height-1">Coordenacao de eventos</span>
-        </div>
-        <p-avatar label="MC" shape="circle" size="large" />
-      </div>
-    </header>
+    <app-header />
 
     <main class="grid app-content overflow-auto p-4 min-w-0">
       <router-outlet />

@@ -10,7 +10,8 @@ import { MenuModule } from 'primeng/menu';
   templateUrl: './sidebar-menu.html',
   styleUrl: './sidebar-menu.scss',
   host: {
-    class: 'sidebar-menu surface-card surface-border border-right-1 flex flex-column gap-3 p-4',
+    class:
+      'sidebar-menu surface-card text-color surface-border border-right-1 flex flex-column gap-3 p-4',
     '[class.sidebar-menu--collapsed]': '!isOpen()',
   },
 })

@@ -1,0 +1,17 @@
+:host {
+  min-height: 72px;
+}
+
+.app-header__user-info strong {
+  font-size: 0.9375rem;
+}
+
+@media (max-width: 820px) {
+  :host {
+    min-height: 64px;
+  }
+
+  .app-header__user-info {
+    display: none;
+  }
+}
