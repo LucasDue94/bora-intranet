@@ -1,0 +1,30 @@
+:host {
+  display: block;
+  min-height: 100%;
+}
+
+.home-page {
+  border-radius: 8px;
+  display: grid;
+  min-height: 100%;
+  place-items: center;
+  padding: 2rem;
+}
+
+.home-page__title {
+  color: var(--p-text-color);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  .home-page {
+    padding: 1.25rem;
+  }
+
+  .home-page__title {
+    font-size: 1.5rem;
+  }
+}

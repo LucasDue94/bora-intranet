@@ -27,7 +27,11 @@ export class LoginPage {
     password: ['', [Validators.required]],
   });
 
-  protected login(): void {
+  login(){
+    void this.router.navigateByUrl('/');
+  }
+
+  /*protected login(): void {
     if (this.loginForm.invalid || this.isLoading()) {
       this.loginForm.markAllAsTouched();
       return;
@@ -49,5 +53,5 @@ export class LoginPage {
           this.errorMessage.set('Nao foi possivel entrar com os dados informados.');
         },
       });
-  }
+  }*/
 }

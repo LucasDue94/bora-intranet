@@ -1,62 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { MenuItem } from 'primeng/api';
-
-import { AppHeader } from '../../components/app-header/app-header';
-import { MainNavigation } from '../../components/main-navigation/main-navigation';
-import { SidebarMenu } from '../../components/sidebar-menu/sidebar-menu';
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [AppHeader, MainNavigation, SidebarMenu],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
-export class App {
-  protected readonly isSidebarOpen = signal(true);
-
-  protected readonly navigationItems: MenuItem[] = [
-    {
-      label: 'Principal',
-      items: [
-        {
-          label: 'Painel',
-          icon: 'pi pi-home',
-          routerLink: '/',
-        },
-        {
-          label: 'Agenda',
-          icon: 'pi pi-calendar',
-        },
-        {
-          label: 'Eventos',
-          icon: 'pi pi-ticket',
-        },
-        {
-          label: 'Equipes',
-          icon: 'pi pi-users',
-        },
-      ],
-    },
-    {
-      label: 'Gestao',
-      items: [
-        {
-          label: 'Financeiro',
-          icon: 'pi pi-wallet',
-        },
-        {
-          label: 'Relatorios',
-          icon: 'pi pi-chart-line',
-        },
-        {
-          label: 'Configuracoes',
-          icon: 'pi pi-cog',
-        },
-      ],
-    },
-  ];
-
-  protected toggleSidebar(): void {
-    this.isSidebarOpen.update((currentValue) => !currentValue);
-  }
-}
+export class App {}

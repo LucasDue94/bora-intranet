@@ -18,6 +18,10 @@ export class LocalSessionStorage extends SessionStoragePort {
     this.menuStorage.set(session.menu);
   }
 
+  isAuthenticated(): boolean {
+    return Boolean(this.tokenStorage.snapshot?.accessToken);
+  }
+
   clear(): void {
     this.tokenStorage.clear();
     this.userStorage.clear();

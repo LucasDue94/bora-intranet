@@ -1,0 +1,16 @@
+<div
+  class="app-shell surface-ground text-color min-h-screen"
+  [class.app-shell--collapsed]="!isSidebarOpen()"
+>
+  <app-sidebar-menu
+    [isOpen]="isSidebarOpen()"
+    [navigationItems]="navigationItems"
+    (toggleMenu)="toggleSidebar()"
+  />
+
+  <div class="app-main min-w-0">
+    <app-header />
+
+    <app-main-navigation />
+  </div>
+</div>

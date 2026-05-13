@@ -18,6 +18,10 @@ export class AuthService {
       .pipe(tap((session) => this.sessionStorage.save(session)));
   }
 
+  isAuthenticated(): boolean {
+    return this.sessionStorage.isAuthenticated();
+  }
+
   logout(): void {
     this.sessionStorage.clear();
   }
