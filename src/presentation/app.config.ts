@@ -1,10 +1,15 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { provideHttpClient } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideRouter } from '@angular/router';
 import Aura from '@primeuix/themes/aura';
 import { definePreset } from '@primeuix/themes';
 import { providePrimeNG } from 'primeng/config';
 
+import { AuthRepositoryPort } from '../core/ports/auth-repository.port';
+import { SessionStoragePort } from '../core/ports/session-storage.port';
+import { AuthHttpRepository } from '../infrastructure/repositories/auth-http.repository';
+import { LocalSessionStorage } from '../infrastructure/storage/local-session.storage';
 import { routes } from './app.routes';
 
 const BoraPreset = definePreset(Aura, {
@@ -89,7 +94,16 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
+    provideHttpClient(),
     provideAnimationsAsync(),
+    {
+      provide: AuthRepositoryPort,
+      useClass: AuthHttpRepository,
+    },
+    {
+      provide: SessionStoragePort,
+      useClass: LocalSessionStorage,
+    },
     providePrimeNG({
       theme: {
         preset: BoraPreset,

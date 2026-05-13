@@ -45,6 +45,16 @@
   min-height: 3.25rem;
 }
 
+.login-page__error {
+  color: var(--p-red-300);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.login-page__submit {
+  min-height: 3rem;
+}
+
 @media (max-width: 520px) {
   .login-page {
     padding: 1rem;
