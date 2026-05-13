@@ -1,9 +1,8 @@
 :host {
   min-width: 0;
   position: relative;
-  transition:
-    padding 180ms ease,
-    width 180ms ease;
+  transition: padding 180ms ease,
+  width 180ms ease;
   z-index: 1;
 }
 
@@ -51,6 +50,10 @@
 
 :host ::ng-deep .sidebar-menu__toggle-button {
   box-shadow: var(--p-overlay-popover-shadow);
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2rem !important;
+  width: 2rem;
+}
+
+:host ::ng-deep .sidebar-menu__toggle-button .p-button-icon {
+  font-size: 0.875rem;
 }

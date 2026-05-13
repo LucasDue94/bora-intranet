@@ -11,7 +11,7 @@
 }
 
 .app-shell--collapsed {
-  grid-template-columns: 64px minmax(0, 1fr);
+  grid-template-columns: 32px minmax(0, 1fr);
 }
 
 .app-main {
@@ -30,6 +30,6 @@
   }
 
   .app-shell--collapsed {
-    grid-template-columns: 64px minmax(0, 1fr);
+    grid-template-columns: 32px minmax(0, 1fr);
   }
 }
