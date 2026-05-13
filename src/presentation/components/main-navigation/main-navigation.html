@@ -1,15 +1,17 @@
 <main class="main-navigation grid overflow-auto p-4 min-w-0">
-  <router-outlet />
+  <router-outlet (activate)="setActiveRoute(true)" (deactivate)="setActiveRoute(false)" />
 
-  <section class="main-navigation__empty surface-card surface-border border-1 border-round p-4">
-    <div class="grid gap-2">
-      <span class="text-color-secondary text-sm line-height-1">
-        Conteudo carregado pelas rotas
-      </span>
-    </div>
-    <p class="text-color-secondary line-height-3 m-0">
-      Este espaco recebe as paginas da intranet via roteamento Angular. Use o menu lateral para
-      navegar entre as areas do sistema.
-    </p>
-  </section>
+  @if (!hasActiveRoute()) {
+    <section class="main-navigation__empty surface-card surface-border border-1 border-round p-4">
+      <div class="grid gap-2">
+        <span class="text-color-secondary text-sm line-height-1">
+          Conteudo carregado pelas rotas
+        </span>
+      </div>
+      <p class="text-color-secondary line-height-3 m-0">
+        Este espaco recebe as paginas da intranet via roteamento Angular. Use o menu lateral para
+        navegar entre as areas do sistema.
+      </p>
+    </section>
+  }
 </main>
