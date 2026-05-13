@@ -6,7 +6,15 @@ Você está trabalhando em um projeto Angular standalone para uma intranet de um
 
 Siga sempre estas regras globais.
 
-Antes de tudo selecione a versão do node utilizando nvm use 22.12.0
+Antes de executar comandos Node/NPM/Angular, use Node 22.12.0.
+
+Como o `nvm` pode não estar carregado em shells não interativos, prefira executar comandos assim:
+
+```bash
+source /home/due/.nvm/nvm.sh && nvm use && <comando>
+```
+
+O projeto possui `.nvmrc`, então `nvm use` seleciona automaticamente a versão correta.
 
 ---
 
