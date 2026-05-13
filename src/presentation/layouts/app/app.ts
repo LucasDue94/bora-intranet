@@ -1,13 +1,13 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 
 import { AppHeader } from '../../components/app-header/app-header';
+import { MainNavigation } from '../../components/main-navigation/main-navigation';
 import { SidebarMenu } from '../../components/sidebar-menu/sidebar-menu';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, AppHeader, SidebarMenu],
+  imports: [AppHeader, MainNavigation, SidebarMenu],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
