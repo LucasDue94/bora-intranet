@@ -18,9 +18,14 @@ import { MenuModule } from 'primeng/menu';
 export class SidebarMenu {
   readonly isOpen = input.required<boolean>();
   readonly navigationItems = input.required<MenuItem[]>();
+  readonly logout = output<void>();
   readonly toggleMenu = output<void>();
 
   protected toggleSidebar(): void {
     this.toggleMenu.emit();
+  }
+
+  protected logoutUser(): void {
+    this.logout.emit();
   }
 }

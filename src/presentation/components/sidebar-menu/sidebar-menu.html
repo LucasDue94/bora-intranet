@@ -19,3 +19,14 @@
 </div>
 
 <p-menu [model]="navigationItems()" styleClass="sidebar-menu__navigation w-full" />
+
+<div class="sidebar-menu__footer mt-auto">
+  <p-button
+    label="Sair"
+    icon="pi pi-sign-out"
+    severity="secondary"
+    styleClass="sidebar-menu__logout w-full justify-content-start"
+    [outlined]="true"
+    (onClick)="logoutUser()"
+  />
+</div>

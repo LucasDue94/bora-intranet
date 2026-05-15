@@ -12,9 +12,9 @@ export class AuthService {
   private readonly authRepository = inject(AuthRepositoryPort);
   private readonly sessionStorage = inject(SessionStoragePort);
 
-  login(email: string, password: string): Observable<AuthSession> {
+  login(emailOrUsername: string, password: string): Observable<AuthSession> {
     return this.authRepository
-      .login(email, password)
+      .login(emailOrUsername, password)
       .pipe(tap((session) => this.sessionStorage.save(session)));
   }
 

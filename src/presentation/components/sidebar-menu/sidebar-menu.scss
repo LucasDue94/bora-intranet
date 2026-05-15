@@ -1,8 +1,9 @@
 :host {
   min-width: 0;
   position: relative;
-  transition: padding 180ms ease,
-  width 180ms ease;
+  transition:
+    padding 180ms ease,
+    width 180ms ease;
   z-index: 1;
 }
 
@@ -30,6 +31,7 @@
 
 :host(.sidebar-menu--collapsed) .sidebar-menu__brand,
 :host(.sidebar-menu--collapsed) .sidebar-menu__separator,
+:host(.sidebar-menu--collapsed) .sidebar-menu__footer,
 :host(.sidebar-menu--collapsed) ::ng-deep .sidebar-menu__navigation {
   opacity: 0;
   pointer-events: none;
@@ -56,4 +58,13 @@
 
 :host ::ng-deep .sidebar-menu__toggle-button .p-button-icon {
   font-size: 0.875rem;
+}
+
+.sidebar-menu__footer {
+  min-width: 248px;
+  transition: opacity 160ms ease;
+}
+
+:host ::ng-deep .sidebar-menu__logout {
+  color: var(--p-text-muted-color);
 }

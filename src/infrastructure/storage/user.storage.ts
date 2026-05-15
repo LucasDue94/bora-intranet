@@ -4,11 +4,11 @@ import { LocalStorageSignal } from './local-storage-signal';
 
 export interface UserStorageValue {
   id: string;
-  name: string;
   email: string;
-  avatarUrl?: string;
-  roles?: string[];
-  permissions?: string[];
+  username: string;
+  role: string;
+  isEmailVerified: boolean;
+  isOnboarded: boolean;
 }
 
 @Injectable({

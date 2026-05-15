@@ -23,35 +23,36 @@ export class LoginPage {
   protected readonly errorMessage = signal<string | null>(null);
 
   protected readonly loginForm = this.formBuilder.group({
-    email: ['', [Validators.required, Validators.email]],
+    emailOrUsername: ['', [Validators.required]],
     password: ['', [Validators.required]],
   });
 
-  login(){
+  /*  login(){
     void this.router.navigateByUrl('/');
-  }
+  }*/
 
-  /*protected login(): void {
+  protected login(): void {
     if (this.loginForm.invalid || this.isLoading()) {
       this.loginForm.markAllAsTouched();
       return;
     }
 
-    const { email, password } = this.loginForm.getRawValue();
+    const { emailOrUsername, password } = this.loginForm.getRawValue();
 
     this.isLoading.set(true);
     this.errorMessage.set(null);
 
     this.authService
-      .login(email, password)
+      .login(emailOrUsername, password)
       .pipe(finalize(() => this.isLoading.set(false)))
       .subscribe({
-        next: () => {
+        next: (res) => {
+          console.log(res);
           void this.router.navigateByUrl('/');
         },
         error: () => {
           this.errorMessage.set('Nao foi possivel entrar com os dados informados.');
         },
       });
-  }*/
+  }
 }

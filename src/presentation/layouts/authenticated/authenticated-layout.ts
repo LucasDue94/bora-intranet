@@ -1,6 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 
+import { AuthService } from '../../../core/services/auth.service';
 import { AppHeader } from '../../components/app-header/app-header';
 import { MainNavigation } from '../../components/main-navigation/main-navigation';
 import { SidebarMenu } from '../../components/sidebar-menu/sidebar-menu';
@@ -12,6 +14,9 @@ import { SidebarMenu } from '../../components/sidebar-menu/sidebar-menu';
   styleUrl: './authenticated-layout.scss',
 })
 export class AuthenticatedLayout {
+  private readonly authService = inject(AuthService);
+  private readonly router = inject(Router);
+
   protected readonly isSidebarOpen = signal(true);
 
   protected readonly navigationItems: MenuItem[] = [
@@ -58,5 +63,10 @@ export class AuthenticatedLayout {
 
   protected toggleSidebar(): void {
     this.isSidebarOpen.update((currentValue) => !currentValue);
+  }
+
+  protected logout(): void {
+    this.authService.logout();
+    void this.router.navigateByUrl('/login');
   }
 }
